@@ -53,10 +53,12 @@ export default function Index() {
               </TouchableOpacity>
             </View>
 
-            <View style={styles.buttonGroupSubText}>
-              <Text style={{ color: "white" }}>Continue to home</Text>
-              <Text style={{ color: "white" }}> →</Text>
-            </View>
+            <TouchableOpacity onPress={() => router.push("/(home)")}>
+              <View style={styles.buttonGroupSubText}>
+                <Text style={{ color: "white" }}>Continue to home</Text>
+                <Text style={{ color: "white" }}> →</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </SafeAreaView>

@@ -62,10 +62,13 @@ export default function Join() {
             <Text style={styles.secondaryButtonText}>Continue with Facebook</Text>
           </TouchableOpacity>
         </View>
-
-        <View style={styles.signupgroup}>
-          <Text style={styles.signupTitleText}>Already have an account? </Text>
-          <Text style={styles.signupSubTitleText}>Sign in</Text>
+        <View style={{ alignItems: "center", marginTop: 12 }}>
+          <View style={{ flexDirection: "row" }}>
+            <Text style={styles.signupTitleText}>Already have an account? </Text>
+            <TouchableOpacity onPress={() => router.push("/signin")}>
+              <Text style={styles.signupSubTitleText}>Sign in</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
