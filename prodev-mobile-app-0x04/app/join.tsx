@@ -5,13 +5,17 @@ import { styles } from "@/styles/_joinstyle";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { GOOGLELOGO, FACEBOOKLOGO } from "@/constants";
+import { useRouter } from "expo-router"; 
 
 export default function Join() {
+    const router = useRouter();
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View style={styles.iconsection}>
-          <Ionicons name="arrow-back" size={25} />
+            <TouchableOpacity onPress={() => router.push("/")}>
+            <Ionicons name="arrow-back" size={25} />
+          </TouchableOpacity>
           <Image source={require("@/assets/images/logo.png")} />
         </View>
 
